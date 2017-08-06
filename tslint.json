@@ -1,0 +1,120 @@
+{
+    "defaultSeverity": "error",
+    "extends": [
+        "tslint:recommended",
+        "tslint-eslint-rules"
+    ],
+    "jsRules": {},
+    "rules": {
+        "ter-indent": [
+            true,
+            4
+        ],
+        "only-arrow-functions": [
+            true,
+            "allow-named-functions"
+        ],
+        "quotemark": [
+            true,
+            "single",
+            "jsx-double"
+        ],
+        "trailing-comma": [
+            false
+        ],
+        "object-literal-sort-keys": [
+            false
+        ],
+        "ordered-imports": [
+            false
+        ],
+        "prefer-const": [
+            false
+        ],
+        "no-console": [
+            false
+        ],
+        "typedef": [
+            true,
+            "parameter",
+            "member-variable-declaration",
+            "arrow-parameter",
+            "property-declaration",
+            "variable-declaration"
+        ],
+        "no-magic-numbers": [
+            true
+        ],
+        "no-reference": true,
+        "curly": true,
+        "no-string-literal": true,
+        "no-string-throw": true,
+        "no-var-keyword": true,
+        "switch-default": true,
+        "triple-equals": true,
+        "eofline": true,
+        "arrow-return-shorthand": true,
+        "interface-name": [
+            "always-prefix"
+        ],
+        "no-consecutive-blank-lines": true,
+        "object-literal-shorthand": true,
+        "prefer-template": true,
+        "align": [
+            true, 
+            "parameters", 
+            "statements"
+        ],
+        "no-irregular-whitespace": true,
+        "no-trailing-whitespace": true,
+        "semicolon": [
+            true, 
+            "always"
+        ],
+        "space-before-function-paren": [
+            false, 
+            "always"
+        ],
+        "no-extra-semi": true,
+        "no-multi-spaces": true,
+        "array-bracket-spacing": [
+            false,
+            "never",
+            {
+                "arraysInArray": false
+            }
+        ],
+        "block-spacing": [
+            true,
+            "always"
+        ],
+        "variable-name": [
+            true,
+            "ban-keywords",
+            "check-format",
+            "allow-pascal-case"
+        ],
+        "brace-style": [
+            true,
+            "1tbs",
+            {
+                "allowSingleLine": true
+            }
+        ],
+        "space-in-parens": [
+            false,
+            "never"
+        ],
+        "import-spacing": [
+            false,
+            "never"
+        ],
+        "whitespace": [
+            true,
+            "check-module"
+        ],
+        "member-access": false,
+        "prefer-object-spread": true
+    },
+    "rulesDirectory": []
+}
