@@ -5,8 +5,8 @@
   "private": true,
   "repository": "https://github.com/kylelamse/react-components.git",
   "scripts": {
-    "storybook": "start-storybook -p 9001 -c .storybook",
-    "lint": "eslint **/*.js --fix"
+    "start": "start-storybook -p 9001 -c .storybook",
+    "lint": "tslint --fix -c tslint.json -p ./tslint.json"
   },
   "dependencies": {
     "@storybook/react": "^3.2.3",

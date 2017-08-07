@@ -5,5 +5,5 @@ import '../components/global.ts';
 
 storiesOf('Button', module)
     .add('Default', () =>
-        <Button />
+        <Button>Click Me</Button>
     );
