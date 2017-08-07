@@ -18,7 +18,8 @@ const ButtonContainer: any = div({
     'justifyContent': 'center',
     'alignItems': 'center',
     'textTransform': 'uppercase',
-    'fontSize': '16px',
+    'fontWeight': 500,
+    'fontSize': '14px',
     'borderRadius': '2px',
     'background': colors.grey['200']
 });
