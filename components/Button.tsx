@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { keyframes } from 'glamor';
 import glamorous from 'glamorous';
 const { button } = glamorous;
 
@@ -22,6 +23,20 @@ const shadow8DP: string = `0px 5px 5px -3px rgba(0, 0, 0, 0.2), \
 
 // easing
 const easeInOut: string = 'cubic-bezier(0.4, 0.0, 0.2, 1)';
+
+// animation
+const ripple: any = keyframes({
+    ['0%']: {
+        transform: 'scale(0)'
+    },
+    ['20%']: {
+        transform: 'scale(1)'
+    },
+    ['100%']: {
+        opacity: 0,
+        transform: 'scale(1)'
+    }
+});
 
 // disable styles
 const disabledStyles: any = {
