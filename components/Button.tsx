@@ -1,27 +1,23 @@
 import * as React from 'react';
 import glamorous from 'glamorous';
-const { div, label } = glamorous;
+const { button, label } = glamorous;
 
 import { colors } from './colors';
 
-const ButtonContainer: any = div({
-    ':hover': {
-        cursor: 'pointer',
-        background: colors.grey['300']
-    },
-    ':firstChild': {
-        color: 'blue'
-    },
-    'width': '100%',
-    'height': '36px',
-    'display': 'flex',
-    'justifyContent': 'center',
-    'alignItems': 'center',
-    'textTransform': 'uppercase',
-    'fontWeight': 500,
-    'fontSize': '14px',
-    'borderRadius': '2px',
-    'background': colors.grey['200']
+const ButtonContainer: any = button({
+    fontFamily: '\'Roboto\', sans-serif',
+    outline: 'none',
+    border: 'none',
+    userSelect: 'none',
+    padding: '0 16px',
+    margin: '0 8px',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    textTransform: 'uppercase',
+    minHeight: '36px',
+    minWidth: '56px',
+    borderRadius: '2px',
 });
 
 interface Props {

@@ -28,5 +28,12 @@ css.global('html, body', {
     ],
     'fontFamily': 'Roboto, sans-serif',
     'padding': 0,
-    'margin': 0
+    'margin': 0,
+    'height': '100%',
+    'width': '100%'
+});
+
+css.global('#root', {
+    height: '100%',
+    width: '100%'
 });
