@@ -41,10 +41,25 @@ const ButtonContainer: any = button({
     color: textColor,
     background: restingColor,
     boxShadow: shadow2DP
+},
+({disabled = false}: Props) => {
+    if (disabled) {
+        return {
+            opacity: 0.4
+        };
+    } else {
+        return {
+            ':hover': {
+                cursor: 'pointer',
+                background: focusedColor
+            }
+        };
+    }
 });
 
 interface Props {
     children: string;
+    disabled?: boolean;
 }
 
 export const Button: React.SFC<Props> = (props: Props) => {
