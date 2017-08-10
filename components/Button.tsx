@@ -23,9 +23,9 @@ const shadow8DP: string = `0px 5px 5px -3px rgba(0, 0, 0, 0.2), \
 // easing
 const easeInOut: string = 'cubic-bezier(0.4, 0.0, 0.2, 1)';
 
-// TODO: Why isn't Roboto font loading???
 const ButtonContainer: any = button({
     fontFamily: '\'Roboto\', sans-serif',
+    fontWeight: 500,
     outline: 'none',
     border: 'none',
     userSelect: 'none',
