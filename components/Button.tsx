@@ -1,6 +1,6 @@
 import * as React from 'react';
 import glamorous from 'glamorous';
-const { button, label } = glamorous;
+const { button } = glamorous;
 
 import { colors } from './colors';
 
