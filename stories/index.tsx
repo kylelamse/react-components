@@ -16,6 +16,6 @@ const Container: any = div({
 storiesOf('Button', module)
     .add('Default', () =>
         <Container>
-            <Button>Click Me</Button>
+            <Button>Default</Button>
         </Container>
     );

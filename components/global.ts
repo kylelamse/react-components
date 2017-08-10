@@ -30,7 +30,12 @@ css.global('html, body', {
     'padding': 0,
     'margin': 0,
     'height': '100%',
-    'width': '100%'
+    'width': '100%',
+    'background': '#EEEEEE'
+});
+
+css.global('*, *:before, *:after', {
+    boxSizing: 'border-box'
 });
 
 css.global('#root', {

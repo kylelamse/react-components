@@ -4,6 +4,26 @@ const { button, label } = glamorous;
 
 import { colors } from './colors';
 
+// colors
+const restingColor: string = '#2196F3';
+const focusedColor: string = '#1A77C9';
+const textColor: string = 'white';
+
+// shadows
+const shadow1DP: string = `0px 1px 3px 0px rgba(0, 0, 0, 0.2), \
+0px 1px 1px 0px rgba(0, 0, 0, 0.14), \
+0px 2px 1px -1px rgba(0, 0, 0, 0.12)`;
+const shadow2DP: string = `0px 1px 5px 0px rgba(0, 0, 0, 0.2), \
+0px 2px 2px 0px rgba(0, 0, 0, 0.14), \
+0px 3px 1px -2px rgba(0, 0, 0, 0.12)`;
+const shadow8DP: string = `0px 5px 5px -3px rgba(0, 0, 0, 0.2), \
+0px 8px 10px 1px rgba(0, 0, 0, 0.14), \
+0px 3px 14px 2px rgba(0, 0, 0, 0.12)`;
+
+// easing
+const easeInOut: string = 'cubic-bezier(0.4, 0.0, 0.2, 1)';
+
+// TODO: Why isn't Roboto font loading???
 const ButtonContainer: any = button({
     fontFamily: '\'Roboto\', sans-serif',
     outline: 'none',
@@ -18,6 +38,9 @@ const ButtonContainer: any = button({
     minHeight: '36px',
     minWidth: '56px',
     borderRadius: '2px',
+    color: textColor,
+    background: restingColor,
+    boxShadow: shadow2DP
 });
 
 interface Props {
