@@ -79,7 +79,7 @@ const enabledStyles: any = {
     },
     // only allow animation when focused
     [':focus:after']: {
-        visibility: 'visibile'
+        visibility: 'visible'
     }
 };
 
