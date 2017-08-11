@@ -2,6 +2,7 @@ import * as React from 'react';
 import { keyframes } from 'glamor';
 import glamorous from 'glamorous';
 const { button } = glamorous;
+import { CSSProperties } from 'glamorous';
 
 import { colors } from './colors';
 
@@ -25,7 +26,7 @@ const shadow8DP: string = `0px 5px 5px -3px rgba(0, 0, 0, 0.2), \
 const easeInOut: string = 'cubic-bezier(0.4, 0.0, 0.2, 1)';
 
 // animation
-const ripple: any = keyframes({
+const ripple: string = keyframes({
     ['0%']: {
         transform: 'scale(0)'
     },
@@ -39,14 +40,14 @@ const ripple: any = keyframes({
 });
 
 // disable styles
-const disabledStyles: any = {
+const disabledStyles: CSSProperties = {
     opacity: 0.4
 };
 
 // enabled styles
 const rippleDimension: number = 100;
 const marginOffset: number = - (rippleDimension / 2);
-const enabledStyles: any = {
+const enabledStyles: CSSProperties = {
     // hover styles
     [':hover']: {
         cursor: 'pointer',
