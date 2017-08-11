@@ -58,7 +58,8 @@ const enabledStyles: any = {
     },
     // ripple styles
     [':after']: {
-        visiblity: 'hidden',
+        visibility: 'hidden',
+        // opacity: .4,
         content: '\'\'',
         display: 'block',
         position: 'absolute',
@@ -78,7 +79,7 @@ const enabledStyles: any = {
     },
     // only allow animation when focused
     [':focus:after']: {
-        visiblity: 'visibile'
+        visibility: 'visibile'
     }
 };
 
