@@ -59,7 +59,7 @@ const enabledStyles: any = {
     // ripple styles
     [':after']: {
         visibility: 'hidden',
-        // opacity: .4,
+        opacity: .4,
         content: '\'\'',
         display: 'block',
         position: 'absolute',
@@ -90,6 +90,7 @@ const ButtonContainer: any = button({
     outline: 'none',
     border: 'none',
     userSelect: 'none',
+    position: 'relative',
     overflow: 'hidden',
     padding: '0 16px',
     margin: '0 8px',
