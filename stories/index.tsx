@@ -17,5 +17,6 @@ storiesOf('Button', module)
     .add('Default', () =>
         <Container>
             <Button>Default</Button>
+            <Button disabled>Disabled</Button>
         </Container>
     );

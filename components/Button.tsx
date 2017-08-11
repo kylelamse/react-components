@@ -114,12 +114,13 @@ const ButtonContainer: any = button({
 interface Props {
     children: string;
     disabled?: boolean;
+    test?: boolean;
 }
 
 export const Button: React.SFC<Props> = (props: Props) => {
-    const { children } = props;
+    const { children, disabled, ...rest } = props;
     return(
-        <ButtonContainer>
+        <ButtonContainer disabled={disabled} {...rest}>
             {children}
         </ButtonContainer>
     );
