@@ -59,7 +59,7 @@ const enabledStyles: any = {
     // ripple styles
     [':after']: {
         visiblity: 'hidden',
-        content: '',
+        content: '\'\'',
         display: 'block',
         position: 'absolute',
         top: '50%',
