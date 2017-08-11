@@ -74,7 +74,7 @@ const enabledStyles: any = {
     },
     // ripple after clicked styles
     [':not(:active):after']: {
-        animation: `ripple 1000ms ${easeInOut}`
+        animation: `${ripple} 1000ms ${easeInOut}`
     },
     // only allow animation when focused
     [':focus:after']: {
@@ -89,6 +89,7 @@ const ButtonContainer: any = button({
     outline: 'none',
     border: 'none',
     userSelect: 'none',
+    overflow: 'hidden',
     padding: '0 16px',
     margin: '0 8px',
     display: 'flex',
