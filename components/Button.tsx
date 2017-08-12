@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { keyframes } from 'glamor';
 import glamorous from 'glamorous';
-const { button } = glamorous;
 import { CSSProperties } from 'glamorous';
 
 import { colors } from './colors';
@@ -85,7 +84,7 @@ const enabledStyles: CSSProperties = {
 };
 
 // base styles
-const ButtonContainer: any = button({
+const ButtonContainer: any = glamorous.button({
     fontFamily: '\'Roboto\', sans-serif',
     fontWeight: 500,
     outline: 'none',
