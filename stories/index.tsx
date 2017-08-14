@@ -3,7 +3,11 @@ import { storiesOf } from '@storybook/react';
 import glamorous from 'glamorous';
 import { GlamorousComponent } from 'glamorous';
 
-import { RaisedButton, FlatButton } from '../src/components';
+import {
+    RaisedButton,
+    FlatButton,
+    FloatingActionButton
+} from '../src/components';
 import '../src/global.ts';
 
 const Container: GlamorousComponent<{}, {}> = glamorous.div({
@@ -35,4 +39,17 @@ storiesOf('FlatButton', module)
         <Container>
             <FlatButton disabled>Disabled</FlatButton>
         </Container>
+    ));
+
+storiesOf('FloatingActionButton', module)
+    .add('Default', () => (
+        <Container>
+            <FloatingActionButton>+</FloatingActionButton>
+        </Container>
+    ))
+    .add('Disabled', () => (
+        <Container>
+            <FloatingActionButton disabled>+</FloatingActionButton>
+        </Container>
+
     ));
