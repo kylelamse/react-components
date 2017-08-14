@@ -1,8 +1,7 @@
 import * as React from 'react';
 import { keyframes } from 'glamor';
 import glamorous from 'glamorous';
-import { CSSProperties, GlamorousComponent, ExtraGlamorousProps } from 'glamorous';
-
+import { CSSProperties, GlamorousComponent } from 'glamorous';
 import { colors } from './colors';
 
 // colors
@@ -84,7 +83,8 @@ const enabledStyles: CSSProperties = {
 };
 
 // base styles
-const ButtonContainer: GlamorousComponent<ExtraGlamorousProps, Props> = glamorous.button({
+const StyledButton: GlamorousComponent<Props, {}> =
+glamorous.button({
     fontFamily: '\'Roboto\', sans-serif',
     fontWeight: 500,
     outline: 'none',
@@ -120,8 +120,10 @@ interface Props {
 export const Button: React.SFC<Props> = (props: Props) => {
     const { children, disabled, ...rest } = props;
     return(
-        <ButtonContainer disabled={disabled} {...rest}>
+        <StyledButton disabled={disabled} {...rest}>
             {children}
-        </ButtonContainer>
+        </StyledButton>
     );
 };
+
+Button.displayName = 'Button';
