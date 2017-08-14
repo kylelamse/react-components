@@ -13,10 +13,14 @@ const Container: GlamorousComponent<{}, {}> = glamorous.div({
     justifyContent: 'center'
 });
 
-storiesOf('Button', module)
+storiesOf('RaisedButton', module)
     .add('Default', () =>
         <Container>
             <RaisedButton>Default</RaisedButton>
+        </Container>
+    )
+    .add('Disabled', () =>
+        <Container>
             <RaisedButton disabled>Disabled</RaisedButton>
         </Container>
     );
