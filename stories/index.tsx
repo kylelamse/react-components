@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import glamorous from 'glamorous';
 const { div } = glamorous;
 
-import { RaisedButton } from '../components';
+import { RaisedButton } from '../src/components';
 import '../components/global.ts';
 
 const Container: any = div({
