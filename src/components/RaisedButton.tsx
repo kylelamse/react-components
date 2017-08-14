@@ -116,13 +116,11 @@ interface Props {
     disabled?: boolean;
 }
 
-export const RaisedButton: React.SFC<Props> = (props: Props) => {
+export function RaisedButton (props: Props) {
     const { children, disabled, ...rest } = props;
     return(
         <StyledButton disabled={disabled} {...rest}>
             {children}
         </StyledButton>
     );
-};
-
-RaisedButton.displayName = 'RaisedButton';
+}
