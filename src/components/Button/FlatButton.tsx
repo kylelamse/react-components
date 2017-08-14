@@ -3,9 +3,6 @@ import glamorous from 'glamorous';
 import { GlamorousComponent, CSSProperties } from 'glamorous';
 
 import {
-    shadow1DP,
-    shadow2DP,
-    shadow8DP,
     easeInOut,
     ripple
 } from '../../styles';

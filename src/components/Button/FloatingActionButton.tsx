@@ -3,11 +3,7 @@ import glamorous from 'glamorous';
 import { GlamorousComponent, CSSProperties } from 'glamorous';
 
 import {
-    shadow1DP,
-    shadow2DP,
-    shadow6DP,
-    shadow8DP,
-    shadow12DP,
+    shadow,
     ripple,
     easeInOut
 } from '../../styles';
@@ -29,7 +25,7 @@ const enabledStyles: CSSProperties = {
         cursor: 'pointer'
     },
     [':active']: {
-        boxShadow: shadow12DP
+        boxShadow: shadow[12]
     },
     [':after']: {
         content: '\'\'',
@@ -68,7 +64,7 @@ const StyledButton: GlamorousComponent<Props, {}> = glamorous.button({
     height: `${buttonDimension}px`,
     width: `${buttonDimension}px`,
     background: restingColor,
-    boxShadow: shadow6DP,
+    boxShadow: shadow[6],
     borderRadius: '50%',
     userSelect: 'none',
     transition: `all 400ms ${easeInOut}`,

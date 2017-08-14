@@ -5,9 +5,7 @@ import { CSSProperties, GlamorousComponent } from 'glamorous';
 
 import { colors } from '../../colors';
 import {
-    shadow1DP,
-    shadow2DP,
-    shadow8DP,
+    shadow,
     easeInOut,
     ripple
 } from '../../styles';
@@ -33,7 +31,7 @@ const enabledStyles: CSSProperties = {
     },
     // during click styles
     [':active']: {
-        boxShadow: shadow8DP
+        boxShadow: shadow[8]
     },
     // ripple styles
     [':after']: {
@@ -84,7 +82,7 @@ glamorous.button({
     borderRadius: '2px',
     color: textColor,
     background: restingColor,
-    boxShadow: shadow2DP,
+    boxShadow: shadow[2],
     transition: `all 400ms ${easeInOut}`
 },
 // function to conditionally apply style objects based on props
