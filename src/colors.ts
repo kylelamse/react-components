@@ -1,4 +1,5 @@
-// Taken from @kawanet from: https://gist.github.com/kawanet/a880c83f06d6baf742e45ac9ac52af96
+// Taken from @kawanet at:
+// https://gist.github.com/kawanet/a880c83f06d6baf742e45ac9ac52af96
 
 interface Color {
     [value: string]: string;
