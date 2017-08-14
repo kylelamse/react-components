@@ -125,4 +125,4 @@ export const RaisedButton: React.SFC<Props> = (props: Props) => {
     );
 };
 
-RaisedButton.displayName = 'Button';
+RaisedButton.displayName = 'RaisedButton';
