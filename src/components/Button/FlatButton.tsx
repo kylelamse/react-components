@@ -2,7 +2,13 @@ import * as React from 'react';
 import glamorous from 'glamorous';
 import { GlamorousComponent, CSSProperties } from 'glamorous';
 
-import { shadow1DP, shadow2DP, shadow8DP, easeInOut, ripple } from '../styles';
+import {
+    shadow1DP,
+    shadow2DP,
+    shadow8DP,
+    easeInOut,
+    ripple
+} from '../../styles';
 
 const restingColor: string = '#2196F3';
 const focusedColor: string = 'rgba(153, 153, 153, 0.2)';

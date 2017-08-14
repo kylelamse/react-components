@@ -10,7 +10,7 @@ import {
     shadow12DP,
     ripple,
     easeInOut
-} from '../styles';
+} from '../../styles';
 
 const restingColor: string = '#2196F3';
 const focusedColor: string = 'rgba(33, 150, 243, 0.8)';

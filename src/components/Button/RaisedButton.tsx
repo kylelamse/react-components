@@ -3,8 +3,14 @@ import { keyframes } from 'glamor';
 import glamorous from 'glamorous';
 import { CSSProperties, GlamorousComponent } from 'glamorous';
 
-import { colors } from '../colors';
-import { shadow1DP, shadow2DP, shadow8DP, easeInOut, ripple } from '../styles';
+import { colors } from '../../colors';
+import {
+    shadow1DP,
+    shadow2DP,
+    shadow8DP,
+    easeInOut,
+    ripple
+} from '../../styles';
 
 // colors
 const restingColor: string = '#2196F3';
@@ -60,6 +66,7 @@ const enabledStyles: CSSProperties = {
 const StyledButton: GlamorousComponent<Props, {}> =
 glamorous.button({
     fontFamily: '\'Roboto\', sans-serif',
+    fontSize: '14px',
     fontWeight: 500,
     outline: 'none',
     border: 'none',

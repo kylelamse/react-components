@@ -1,5 +1,5 @@
 import * as React from 'react';
 
-export { RaisedButton } from './RaisedButton';
-export { FlatButton } from './FlatButton';
-export { FloatingActionButton } from './FloatingActionButton';
+export { RaisedButton } from './Button/RaisedButton';
+export { FlatButton } from './Button/FlatButton';
+export { FloatingActionButton } from './Button/FloatingActionButton';
