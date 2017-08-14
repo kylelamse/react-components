@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import glamorous from 'glamorous';
 const { div } = glamorous;
 
-import { Button } from '../components';
+import { RaisedButton } from '../components';
 import '../components/global.ts';
 
 const Container: any = div({
@@ -16,7 +16,7 @@ const Container: any = div({
 storiesOf('Button', module)
     .add('Default', () =>
         <Container>
-            <Button>Default</Button>
-            <Button disabled>Disabled</Button>
+            <RaisedButton>Default</RaisedButton>
+            <RaisedButton disabled>Disabled</RaisedButton>
         </Container>
     );

@@ -114,10 +114,9 @@ glamorous.button({
 interface Props {
     children: string;
     disabled?: boolean;
-    test?: boolean;
 }
 
-export const Button: React.SFC<Props> = (props: Props) => {
+export const RaisedButton: React.SFC<Props> = (props: Props) => {
     const { children, disabled, ...rest } = props;
     return(
         <StyledButton disabled={disabled} {...rest}>
@@ -126,4 +125,4 @@ export const Button: React.SFC<Props> = (props: Props) => {
     );
 };
 
-Button.displayName = 'Button';
+RaisedButton.displayName = 'Button';
