@@ -2,40 +2,14 @@ import * as React from 'react';
 import { keyframes } from 'glamor';
 import glamorous from 'glamorous';
 import { CSSProperties, GlamorousComponent } from 'glamorous';
+
 import { colors } from '../colors';
+import { shadow1DP, shadow2DP, shadow8DP, easeInOut, ripple } from '../styles';
 
 // colors
 const restingColor: string = '#2196F3';
 const focusedColor: string = '#1A77C9';
 const textColor: string = 'white';
-
-// shadows
-const shadow1DP: string = `0px 1px 3px 0px rgba(0, 0, 0, 0.2), \
-0px 1px 1px 0px rgba(0, 0, 0, 0.14), \
-0px 2px 1px -1px rgba(0, 0, 0, 0.12)`;
-const shadow2DP: string = `0px 1px 5px 0px rgba(0, 0, 0, 0.2), \
-0px 2px 2px 0px rgba(0, 0, 0, 0.14), \
-0px 3px 1px -2px rgba(0, 0, 0, 0.12)`;
-const shadow8DP: string = `0px 5px 5px -3px rgba(0, 0, 0, 0.2), \
-0px 8px 10px 1px rgba(0, 0, 0, 0.14), \
-0px 3px 14px 2px rgba(0, 0, 0, 0.12)`;
-
-// easing
-const easeInOut: string = 'cubic-bezier(0.4, 0.0, 0.2, 1)';
-
-// animation
-const ripple: string = keyframes({
-    ['0%']: {
-        transform: 'scale(0)'
-    },
-    ['20%']: {
-        transform: 'scale(1)'
-    },
-    ['100%']: {
-        opacity: 0,
-        transform: 'scale(1)'
-    }
-});
 
 // disable styles
 const disabledStyles: CSSProperties = {
