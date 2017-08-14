@@ -51,5 +51,4 @@ storiesOf('FloatingActionButton', module)
         <Container>
             <FloatingActionButton disabled>+</FloatingActionButton>
         </Container>
-
     ));
