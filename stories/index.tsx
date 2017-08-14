@@ -4,7 +4,7 @@ import glamorous from 'glamorous';
 import { GlamorousComponent } from 'glamorous';
 
 import { RaisedButton } from '../src/components';
-import '../src/components/global.ts';
+import '../src/global.ts';
 
 const Container: GlamorousComponent<{}, {}> = glamorous.div({
     height: '100%',

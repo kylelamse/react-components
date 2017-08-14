@@ -2,7 +2,7 @@ import * as React from 'react';
 import { keyframes } from 'glamor';
 import glamorous from 'glamorous';
 import { CSSProperties, GlamorousComponent } from 'glamorous';
-import { colors } from './colors';
+import { colors } from '../colors';
 
 // colors
 const restingColor: string = '#2196F3';
