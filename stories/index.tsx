@@ -1,12 +1,12 @@
 import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 import glamorous from 'glamorous';
-const { div } = glamorous;
+import { GlamorousComponent } from 'glamorous';
 
 import { RaisedButton } from '../src/components';
 import '../components/global.ts';
 
-const Container: any = div({
+const Container: GlamorousComponent<{}, {}> = glamorous.div({
     height: '100%',
     display: 'flex',
     alignItems: 'center',
