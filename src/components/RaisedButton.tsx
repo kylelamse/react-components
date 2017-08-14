@@ -116,7 +116,7 @@ interface Props {
     disabled?: boolean;
 }
 
-export function RaisedButton (props: Props) {
+export function RaisedButton (props: Props): JSX.Element {
     const { children, disabled, ...rest } = props;
     return(
         <StyledButton disabled={disabled} {...rest}>
