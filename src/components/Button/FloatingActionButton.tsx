@@ -6,7 +6,7 @@ import { StyledButton } from '../../typings';
 import {
     shadow
 } from '../../styles';
-import { colors } from '../../colors';
+import { colors, hexToRGBA } from '../../colors';
 import {
     baseButtonStyles,
     baseEnabledStyles,
@@ -14,7 +14,7 @@ import {
 } from './SharedStyles';
 
 const restingColor: string = colors.blue[500];
-const focusedColor: string = 'rgba(33, 150, 243, 0.8)';
+const focusedColor: string = hexToRGBA(colors.blue[500], 0.8);
 const textColor: string = 'white';
 const rippleColor: string = 'white';
 const buttonDimension: number = 56;
