@@ -5,6 +5,7 @@
   "private": true,
   "repository": "https://github.com/kylelamse/react-components.git",
   "scripts": {
+    "build": "tsc",
     "start": "start-storybook -p 9001 -c .storybook",
     "lint": "tslint --fix -c tslint.json -p ./tslint.json",
     "test": "jest"
