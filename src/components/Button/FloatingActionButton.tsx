@@ -1,12 +1,16 @@
 import * as React from 'react';
 import glamorous from 'glamorous';
-import { GlamorousComponent, CSSProperties } from 'glamorous';
+import { CSSProperties } from 'glamorous';
 
+import { StyledButton } from '../../typings';
 import {
     shadow,
     ripple,
     easeInOut
 } from '../../styles';
+import {
+    baseButton
+} from './SharedStyles';
 
 const restingColor: string = '#2196F3';
 const focusedColor: string = 'rgba(33, 150, 243, 0.8)';
@@ -51,26 +55,14 @@ const enabledStyles: CSSProperties = {
     }
 };
 
-const StyledButton: GlamorousComponent<Props, {}> = glamorous.button({
-    fontFamily: '\'Roboto\', sans-serif',
-    fontWeight: 500,
-    position: 'relative',
+const StyledButton: StyledButton<Props> = glamorous.button({
     color: textColor,
-    fontSize: '24px',
-    margin: '0 8px',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
     height: `${buttonDimension}px`,
     width: `${buttonDimension}px`,
     background: restingColor,
     boxShadow: shadow[6],
     borderRadius: '50%',
-    userSelect: 'none',
-    transition: `all 400ms ${easeInOut}`,
-    overflow: 'hidden',
-    border: 'none',
-    outline: 'none'
+    ...baseButton
 }, ({ disabled }: Props) => (disabled ? disabledStyles : enabledStyles));
 
 interface Props {

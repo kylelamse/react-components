@@ -1,11 +1,13 @@
 import * as React from 'react';
 import glamorous from 'glamorous';
-import { GlamorousComponent, CSSProperties } from 'glamorous';
+import { CSSProperties } from 'glamorous';
 
 import {
     easeInOut,
     ripple
 } from '../../styles';
+
+import { StyledButton } from '../../typings';
 
 const restingColor: string = '#2196F3';
 const focusedColor: string = 'rgba(153, 153, 153, 0.2)';
@@ -46,7 +48,7 @@ const enabledStyles: CSSProperties = {
     }
 };
 
-const StyledButton: GlamorousComponent<Props, {}> = glamorous.button({
+const StyledButton: StyledButton<Props> = glamorous.button({
     fontFamily: '\'Roboto\', sans-serif',
     fontWeight: 500,
     position: 'relative',

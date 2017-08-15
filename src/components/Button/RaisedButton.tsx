@@ -1,9 +1,10 @@
 import * as React from 'react';
 import { keyframes } from 'glamor';
 import glamorous from 'glamorous';
-import { CSSProperties, GlamorousComponent } from 'glamorous';
+import { CSSProperties } from 'glamorous';
 
 import { colors } from '../../colors';
+import { StyledButton } from '../../typings';
 import {
     shadow,
     easeInOut,
@@ -61,8 +62,7 @@ const enabledStyles: CSSProperties = {
 };
 
 // base styles
-const StyledButton: GlamorousComponent<Props, {}> =
-glamorous.button({
+const StyledButton: StyledButton<Props> = glamorous.button({
     fontFamily: '\'Roboto\', sans-serif',
     fontSize: '14px',
     fontWeight: 500,
