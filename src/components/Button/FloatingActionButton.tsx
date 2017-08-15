@@ -22,15 +22,13 @@ const disabledStyles: CSSProperties = baseDisabledStyles({
     opacity: 0.4
 });
 
-const enabledStyles: CSSProperties = {
-    ...baseEnabledStyles({
-        focusedColor,
-        rippleColor,
-        rippleDimension: buttonDimension,
-        opacity: .2,
-        activeShadow: shadow[12]
-    })
-};
+const enabledStyles: CSSProperties = baseEnabledStyles({
+    focusedColor,
+    rippleColor,
+    rippleDimension: buttonDimension,
+    opacity: .2,
+    activeShadow: shadow[12]
+});
 
 const StyledButton: StyledButton<Props> = glamorous.button(
     baseButtonStyles({
