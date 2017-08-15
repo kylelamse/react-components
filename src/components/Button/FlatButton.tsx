@@ -21,7 +21,7 @@ const enabledStyles: CSSProperties = baseEnabledStyles({
     focusedColor,
     rippleColor,
     rippleDimension,
-    opacity: .6,
+    rippleOpacity: .6,
     activeShadow: 'none'
 });
 

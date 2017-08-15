@@ -26,7 +26,7 @@ const enabledStyles: CSSProperties = baseEnabledStyles({
     focusedColor,
     rippleColor,
     rippleDimension: buttonDimension,
-    opacity: .2,
+    rippleOpacity: .2,
     activeShadow: shadow[12]
 });
 

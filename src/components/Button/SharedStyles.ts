@@ -56,7 +56,7 @@ interface BaseEnabledOptions {
     focusedColor: string;
     rippleColor: string;
     rippleDimension: number;
-    opacity: number;
+    rippleOpacity: number;
     activeShadow: string;
 }
 export function baseEnabledStyles(opts: BaseEnabledOptions): CSSProperties {
@@ -64,7 +64,7 @@ export function baseEnabledStyles(opts: BaseEnabledOptions): CSSProperties {
         focusedColor,
         rippleColor,
         rippleDimension,
-        opacity,
+        rippleOpacity,
         activeShadow
     } = opts;
 
@@ -87,7 +87,7 @@ export function baseEnabledStyles(opts: BaseEnabledOptions): CSSProperties {
             left: '50%',
             borderRadius: '50%',
             transform: 'scale(0)',
-            opacity,
+            opacity: rippleOpacity,
             background: rippleColor,
             height: `${rippleDimension}px`,
             width: `${rippleDimension}px`,
