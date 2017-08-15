@@ -57,13 +57,15 @@ interface BaseEnabledOptions {
     rippleColor: string;
     rippleDimension: number;
     opacity: number;
+    activeShadow: string;
 }
 export function baseEnabledStyles(opts: BaseEnabledOptions): CSSProperties {
     const {
         focusedColor,
         rippleColor,
         rippleDimension,
-        opacity
+        opacity,
+        activeShadow
     } = opts;
 
     const rippleMarginOffset: number = -(rippleDimension / 2);
@@ -72,6 +74,9 @@ export function baseEnabledStyles(opts: BaseEnabledOptions): CSSProperties {
         [':hover']: {
             cursor: 'pointer',
             background: focusedColor
+        },
+        [':active']: {
+            boxShadow: activeShadow
         },
         [':after']: {
             content: '\'\'',

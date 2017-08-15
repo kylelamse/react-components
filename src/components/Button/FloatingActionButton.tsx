@@ -4,12 +4,11 @@ import { CSSProperties } from 'glamorous';
 
 import { StyledButton } from '../../typings';
 import {
-    shadow,
-    ripple,
-    easeInOut
+    shadow
 } from '../../styles';
 import {
     baseButtonStyles,
+    baseEnabledStyles,
     baseDisabledStyles
 } from './SharedStyles';
 
@@ -23,37 +22,14 @@ const disabledStyles: CSSProperties = baseDisabledStyles({
     opacity: 0.4
 });
 
-const rippleMarginOffset: number = - (buttonDimension / 2);
 const enabledStyles: CSSProperties = {
-    [':hover']: {
-        background: focusedColor,
-        cursor: 'pointer'
-    },
-    [':active']: {
-        boxShadow: shadow[12]
-    },
-    [':after']: {
-        content: '\'\'',
-        display: 'block',
-        visibility: 'hidden',
-        position: 'absolute',
-        top: '50%',
-        left: '50%',
-        borderRadius: '50%',
-        background: rippleColor,
+    ...baseEnabledStyles({
+        focusedColor,
+        rippleColor,
+        rippleDimension: buttonDimension,
         opacity: .2,
-        height: `${buttonDimension}px`,
-        width: `${buttonDimension}px`,
-        marginLeft: `${rippleMarginOffset}px`,
-        marginTop: `${rippleMarginOffset}px`,
-        transform: 'scale(0)'
-    },
-    [':not(:active):after']: {
-        animation: `${ripple} 1000ms ${easeInOut}`
-    },
-    [':focus:after']: {
-        visibility: 'visible'
-    }
+        activeShadow: shadow[12]
+    })
 };
 
 const StyledButton: StyledButton<Props> = glamorous.button(

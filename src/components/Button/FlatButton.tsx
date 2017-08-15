@@ -21,7 +21,8 @@ const enabledStyles: CSSProperties = baseEnabledStyles({
     focusedColor,
     rippleColor,
     rippleDimension,
-    opacity: .6
+    opacity: .6,
+    activeShadow: 'none'
 });
 
 const StyledButton: StyledButton<Props> = glamorous.button(
