@@ -15,7 +15,7 @@ import { colors } from '../../colors';
 
 // colors
 const restingColor: string = colors.blue[500];
-const focusedColor: string = '#1A77C9';
+const focusedColor: string = colors.blue[700];
 const textColor: string = 'white';
 
 // disable styles
