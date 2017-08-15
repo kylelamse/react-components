@@ -44,7 +44,7 @@ const enabledStyles: CSSProperties = {
         transform: 'scale(0)'
     },
     [':not(:active):after']: {
-        animation: `${ripple} 100ms ${easeInOut}`
+        animation: `${ripple} 1000ms ${easeInOut}`
     },
     [':focus:after']: {
         visibility: 'visible'
