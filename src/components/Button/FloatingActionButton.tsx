@@ -6,13 +6,14 @@ import { StyledButton } from '../../typings';
 import {
     shadow
 } from '../../styles';
+import { colors } from '../../colors';
 import {
     baseButtonStyles,
     baseEnabledStyles,
     baseDisabledStyles
 } from './SharedStyles';
 
-const restingColor: string = '#2196F3';
+const restingColor: string = colors.blue[500];
 const focusedColor: string = 'rgba(33, 150, 243, 0.8)';
 const textColor: string = 'white';
 const rippleColor: string = 'white';

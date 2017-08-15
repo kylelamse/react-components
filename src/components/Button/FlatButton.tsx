@@ -8,8 +8,9 @@ import {
     baseButtonStyles
 } from './SharedStyles';
 import { StyledButton } from '../../typings';
+import { colors } from '../../colors';
 
-const restingColor: string = '#2196F3';
+const fontColor: string = colors.blue[500];
 const focusedColor: string = 'rgba(153, 153, 153, 0.2)';
 const rippleColor: string = 'rgba(153, 153, 153, 0.4)';
 const rippleDimension: number = 100;
@@ -27,7 +28,7 @@ const enabledStyles: CSSProperties = baseEnabledStyles({
 
 const StyledButton: StyledButton<Props> = glamorous.button(
     baseButtonStyles({
-        fontColor: restingColor,
+        fontColor,
         backgroundColor: 'transparent',
         fontSize: '14px',
         padding: '0 16px',
