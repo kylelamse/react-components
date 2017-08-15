@@ -3,74 +3,38 @@ import glamorous from 'glamorous';
 import { CSSProperties } from 'glamorous';
 
 import {
-    easeInOut,
-    ripple
-} from '../../styles';
-
+    baseEnabledStyles,
+    baseDisabledStyles,
+    baseButtonStyles
+} from './SharedStyles';
 import { StyledButton } from '../../typings';
 
 const restingColor: string = '#2196F3';
 const focusedColor: string = 'rgba(153, 153, 153, 0.2)';
 const rippleColor: string = 'rgba(153, 153, 153, 0.4)';
 const rippleDimension: number = 100;
-const rippleMarginOffset: number = -(rippleDimension / 2);
 
-const disabledStyles: CSSProperties = {
+const disabledStyles: CSSProperties = baseDisabledStyles({
     opacity: 0.4
-};
+});
+const enabledStyles: CSSProperties = baseEnabledStyles({
+    focusedColor,
+    rippleColor,
+    rippleDimension,
+    opacity: .6
+});
 
-const enabledStyles: CSSProperties = {
-    [':hover']: {
-        cursor: 'pointer',
-        background: focusedColor
-    },
-    [':after']: {
-        content: '\'\'',
-        display: 'block',
-        visibility: 'hidden',
-        position: 'absolute',
-        top: '50%',
-        left: '50%',
-        borderRadius: '50%',
-        background: rippleColor,
-        opacity: .6,
-        height: `${rippleDimension}px`,
-        width: `${rippleDimension}px`,
-        marginLeft: `${rippleMarginOffset}px`,
-        marginTop: `${rippleMarginOffset}px`,
-        transform: 'scale(0)'
-    },
-    [':focus:after']: {
-        visibility: 'visible'
-    },
-    [':not(:active):after']: {
-        animation: `${ripple} 1000ms ${easeInOut}`
-    }
-};
-
-const StyledButton: StyledButton<Props> = glamorous.button({
-    fontFamily: '\'Roboto\', sans-serif',
-    fontWeight: 500,
-    position: 'relative',
-    color: restingColor,
-    fontSize: '14px',
-    padding: '0 16px',
-    margin: '0 8px',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    textTransform: 'uppercase',
-    minHeight: '36px',
-    minWidth: '88px',
-    background: 'transparent',
-    boxShadow: 'none',
-    borderRadius: '2px',
-    userSelect: 'none',
-    transition: `all 400ms ${easeInOut}`,
-    overflow: 'hidden',
-    border: 'none',
-    outline: 'none'
-}, ({ disabled }: Props) => (
+const StyledButton: StyledButton<Props> = glamorous.button(
+    baseButtonStyles({
+        fontColor: restingColor,
+        backgroundColor: 'transparent',
+        fontSize: '14px',
+        padding: '0 16px',
+        minHeight: '36px',
+        minWidth: '88px',
+        boxShadow: 'none',
+        borderRadius: '2px'
+    }), ({ disabled }: Props) => (
     disabled ? disabledStyles : enabledStyles
 ));
 

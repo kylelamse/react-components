@@ -9,7 +9,8 @@ import {
     easeInOut
 } from '../../styles';
 import {
-    baseButton
+    baseButtonStyles,
+    baseDisabledStyles
 } from './SharedStyles';
 
 const restingColor: string = '#2196F3';
@@ -18,9 +19,9 @@ const textColor: string = 'white';
 const rippleColor: string = 'white';
 const buttonDimension: number = 56;
 
-const disabledStyles: CSSProperties = {
+const disabledStyles: CSSProperties = baseDisabledStyles({
     opacity: 0.4
-};
+});
 
 const rippleMarginOffset: number = - (buttonDimension / 2);
 const enabledStyles: CSSProperties = {
@@ -55,15 +56,17 @@ const enabledStyles: CSSProperties = {
     }
 };
 
-const StyledButton: StyledButton<Props> = glamorous.button({
-    color: textColor,
-    height: `${buttonDimension}px`,
-    width: `${buttonDimension}px`,
-    background: restingColor,
-    boxShadow: shadow[6],
-    borderRadius: '50%',
-    ...baseButton
-}, ({ disabled }: Props) => (disabled ? disabledStyles : enabledStyles));
+const StyledButton: StyledButton<Props> = glamorous.button(
+    baseButtonStyles({
+        fontColor: textColor,
+        backgroundColor: restingColor,
+        boxShadow: shadow[6],
+        borderRadius: '50%',
+        fontSize: '24px',
+        padding: '0px',
+        minHeight: `${buttonDimension}px`,
+        minWidth: `${buttonDimension}px`
+    }), ({ disabled }: Props) => (disabled ? disabledStyles : enabledStyles));
 
 interface Props {
     children: string;
