@@ -3,6 +3,7 @@ import { storiesOf } from '@storybook/react';
 import glamorous from 'glamorous';
 import { GlamorousComponent } from 'glamorous';
 
+import { CircularProgress } from '../src/components';
 import {
     RaisedButton,
     FlatButton,
@@ -50,5 +51,12 @@ storiesOf('FloatingActionButton', module)
     .add('Disabled', () => (
         <Container>
             <FloatingActionButton disabled>+</FloatingActionButton>
+        </Container>
+    ));
+
+storiesOf('CircularProgress', module)
+    .add('Indeterinate', () => (
+        <Container>
+            <CircularProgress />
         </Container>
     ));
