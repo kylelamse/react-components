@@ -8,10 +8,11 @@ import {
     baseButtonStyles
 } from './SharedStyles';
 import { StyledButton } from '../../typings';
-import { colors } from '../../colors';
+import { colors, hexToRGBA } from '../../colors';
 
 const fontColor: string = colors.blue[500];
-const focusedColor: string = 'rgba(153, 153, 153, 0.2)';
+// const focusedColor: string = 'rgba(153, 153, 153, 0.2)';
+const focusedColor: string = hexToRGBA(colors.grey[500], 0.2);
 const rippleColor: string = 'rgba(153, 153, 153, 0.4)';
 const rippleDimension: number = 100;
 

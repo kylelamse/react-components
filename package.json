@@ -6,10 +6,12 @@
   "repository": "https://github.com/kylelamse/react-components.git",
   "scripts": {
     "start": "start-storybook -p 9001 -c .storybook",
-    "lint": "tslint --fix -c tslint.json -p ./tslint.json"
+    "lint": "tslint --fix -c tslint.json -p ./tslint.json",
+    "test": "jest"
   },
   "dependencies": {
     "@storybook/react": "^3.2.3",
+    "@types/jest": "^20.0.7",
     "@types/node": "^8.0.19",
     "@types/prop-types": "^15.5.1",
     "@types/react": "^16.0.0",
@@ -18,11 +20,26 @@
     "awesome-typescript-loader": "^3.2.2",
     "glamor": "^2.20.39",
     "glamorous": "^4.1.0",
+    "jest": "^20.0.4",
     "prop-types": "^15.5.10",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
+    "ts-jest": "^20.0.10",
     "tslint": "^5.5.0",
     "tslint-eslint-rules": "^4.1.1",
     "typescript": "^2.4.2"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(tsx?|jsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "json",
+      "jsx"
+    ]
   }
 }

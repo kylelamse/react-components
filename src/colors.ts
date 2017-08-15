@@ -9,6 +9,15 @@ interface Colors {
     [name: string]: Color;
 }
 
+export function hexToRGBA(hex: string, opacity?: number): (string | null) {
+    const RGBRegex: RegExp = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i;
+    const result: (RegExpExecArray | null) = RGBRegex.exec(hex);
+    const r: number = result ? parseInt(result[1], 16) : 0;
+    const g: number = result ? parseInt(result[2], 16) : 0;
+    const b: number = result ? parseInt(result[3], 16) : 0;
+    return result ? `rgba(${r}, ${g}, ${b}, ${opacity || 1})` : null;
+}
+
 export const colors: Colors = {
     red: {
         50: '#ffebee',
