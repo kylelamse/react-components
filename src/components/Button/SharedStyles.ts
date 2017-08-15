@@ -1,7 +1,6 @@
 import { CSSProperties } from 'glamorous';
 
 import {
-    ripple,
     easeInOut
 } from '../../styles';
 

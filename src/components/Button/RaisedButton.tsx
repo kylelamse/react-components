@@ -1,9 +1,7 @@
 import * as React from 'react';
-import { keyframes } from 'glamor';
 import glamorous from 'glamorous';
 import { CSSProperties } from 'glamorous';
 
-import { colors } from '../../colors';
 import { StyledButton } from '../../typings';
 import {
     shadow,
